@@ -36,7 +36,7 @@ CREATE TABLE Product
     stock         int,
     sale_price    decimal,
     buy_price     decimal,
-    product_image blob
+    product_image NVARCHAR(255)
 );
 
 CREATE TABLE Sale
