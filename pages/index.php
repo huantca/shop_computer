@@ -345,7 +345,7 @@ $loadQuery = $loadQuery . " LIMIT " . $bound . ", " . $nbProductsInPage;
 
         /* Firefox */
         input[type=number] {
-            -moz-appearance: textfield;
+            appearance: textfield;
             text-align: center;
             font-weight: bold;
         }
@@ -606,6 +606,7 @@ if (isset($_SESSION['customerID'])) {
             const products_box = document.getElementById("categories");
             var products_inner_html = "";
             if (products.length > 0) {
+                console.log(products);
                 for (var i = 0; i < products.length; i++) {
                     //format description
                     var product_description = products[i][6];

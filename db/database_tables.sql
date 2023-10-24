@@ -1,9 +1,3 @@
--- CREATE
--- DATABASE ecommerce;
-
--- USE
--- ecommerce;
-
 CREATE TABLE Admin
 (
     adminID   int PRIMARY KEY AUTO_INCREMENT,
@@ -20,7 +14,7 @@ CREATE TABLE Customer
     full_name  VARCHAR(20),
     userName   VARCHAR(20),
     password   TEXT,
-    addresse   VARCHAR(50),
+    address   VARCHAR(50),
     email      VARCHAR(50),
     phone      VARCHAR(20)
 );
@@ -36,7 +30,7 @@ CREATE TABLE Product
 (
     productID     int PRIMARY KEY AUTO_INCREMENT,
     name          VARCHAR(20),
-    desription    VARCHAR(255),
+    description    VARCHAR(255),
     category      VARCHAR(20),
     CONSTRAINT FK_CI FOREIGN KEY (category) REFERENCES Category (category_name),
     stock         int,
